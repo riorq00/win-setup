@@ -7,7 +7,7 @@ vim.opt.fileencoding = "utf-8"
 vim.wo.number = true
 
 -- Leader key
-vim.g.mapleader = ","
+vim.g.mapleader = " "
 
 vim.opt.title = true
 vim.opt.autoindent = true
