@@ -139,10 +139,17 @@ nvim_lsp.html.setup {
 }
 
 nvim_lsp.emmet_ls.setup {
-  on_attach = on_attach,
+  -- on_attach = on_attach,
   capabilities = capabilities,
   cmd = { "emmet-ls.cmd", "--stdio" },
   filetypes = { "html", "tailwindcss", "typescriptreact", "javascriptreact", "sass", "scss", "less" },
+  init_options = {
+    html = {
+      options = {
+        ["bem.enabled"] = true,
+      }
+    }
+  }
 }
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
