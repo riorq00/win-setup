@@ -22,6 +22,7 @@ vim.cmd([[
 
 packer.startup(function(use)
   use 'tpope/vim-surround'
+  use 'hrsh7th/cmp-nvim-lsp-signature-help'
   use 'jose-elias-alvarez/typescript.nvim'
   use 'wbthomason/packer.nvim'
   -- use { 'ms-jpq/coq.artifacts', branch = 'artifacts'}
@@ -35,7 +36,11 @@ packer.startup(function(use)
   }
   use "rafamadriz/friendly-snippets"
   use 'nvim-lualine/lualine.nvim' -- Statusline
-  use 'numToStr/Comment.nvim' -- Auto comment
+  use { 'numToStr/Comment.nvim',
+    requires = {
+      'JoosepAlviste/nvim-ts-context-commentstring'
+    }
+  }
   use 'nvim-lua/plenary.nvim' -- Common utilities
   use 'onsails/lspkind-nvim' -- vscode-like pictograms
   use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
