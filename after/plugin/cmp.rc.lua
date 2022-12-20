@@ -25,6 +25,7 @@ cmp.setup({
     { name = 'buffer' },
     { name = "luasnip", option = { show_autosnippets = true } },
     { name = "path" }, -- file system paths
+    { name = 'nvim_lsp_signature_help' }
   }),
   formatting = {
     format = lspkind.cmp_format({ with_text = false, maxwidth = 50 })
